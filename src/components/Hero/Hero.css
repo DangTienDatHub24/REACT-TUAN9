@@ -1,0 +1,136 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25) 0%, transparent 60%);
+}
+
+/* Recipe of the day card */
+.recipe-card {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 28px 28px;
+  width: 280px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
+  border: 1.5px dashed #ddd;
+  animation: cardSlideIn 0.6s ease;
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+.recipe-tag {
+  display: inline-block;
+  background: #F5A623;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  position: relative;
+  bottom: 50px;
+}
+
+.recipe-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #E63E6D;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.recipe-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 28px;
+}
+
+/* Bottom row: author + button side by side */
+.recipe-bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.recipe-author {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recipe-author-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #f5e0e8;
+}
+
+.recipe-author span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.recipe-view-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #E63E6D, #ff6b9d);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(230, 62, 109, 0.35);
+  margin-top: 20px;
+}
+
+.recipe-view-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(230, 62, 109, 0.45);
+}
